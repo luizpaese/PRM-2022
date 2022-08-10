@@ -1,11 +1,22 @@
-import express from 'express'
+import express from 'express';
+import cors from 'cors';
+import { AppDataSource } from './data-source';
 
-// Instancia uma aplicação express
+//instnacia o express na const app
 const app = express();
 
-// Determina a porta de execucao
+//define porta
 const PORT = 3300;
 
-app.listen(PORT, () => {
-    console.log(`Server listening at ${PORT}`);
+app.use(cors());
+app.use(express.json());
+
+AppDataSource.initialize().then(() => {
+
+    app.listen(PORT, () => {
+        console.log(`App rodando na porta: ${PORT}`);
+    })
+
+}).catch(error => {
+    console.log(`Sem conexão com DB: ${error}`);
 });
