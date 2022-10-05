@@ -16,9 +16,9 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "@typesCustom": ["/Users/libajunior/Professor/PRM-2022/@types/index.ts"]
+      "@typesCustom": ["C:\\Users\\luizp\\OneDrive\\Documentos\\VSCode\\PRM-2022\\@types\\index.ts"]
     },
-    "rootDirs": ["/Users/libajunior/Professor/PRM-2022/@types"],   
+    "rootDirs": ["C:\\Users\\luizp\\OneDrive\\Documentos\\VSCode\\PRM-2022\\@types"],   
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
