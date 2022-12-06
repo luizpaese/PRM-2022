@@ -2,7 +2,7 @@ import {ICredential} from '@typesCustom';
 import { PrimaryButton, Stack, TextField } from "@fluentui/react";
 import { FormEvent, useState } from "react";
 import { signInAdmin } from '../../services/server';
-import { useAuth } from '../../hooks/useAuth';
+import { useAuth } from '../../hook/useAuth';
 
 export function LoginPage() {
 

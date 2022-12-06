@@ -10,6 +10,12 @@ export class Order extends BaseEntity {
     @ManyToOne(() => Customer, {eager: true, nullable: false})
     customer: Customer;
 
+    @Column('decimal', {nullable: false, precision: 10, scale: 2})
+    shipping: number;
+
+    @Column({nullable: false})
+    deadline: number;
+
     @Column({nullable: false})
     orderDate: Date;
 

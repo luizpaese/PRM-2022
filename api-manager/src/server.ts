@@ -24,6 +24,10 @@ app.use('/account', createProxyMiddleware({
     target: 'http://localhost:3302'
 }));
 
+app.use('/correios/consulta', createProxyMiddleware({
+    target: 'http://localhost:3305'
+}));
+
 //Inicio a aplicação
 app.listen(PORT, () => {
     console.log(`API Manager running in port ${PORT}`);

@@ -1,18 +1,10 @@
 import { IconButton, IContextualMenuProps, IRenderFunction, Persona, PersonaSize, Stack, Text, Tooltip, TooltipHost } from '@fluentui/react';
 import { Nav, INavLinkGroup, IRenderGroupHeaderProps } from '@fluentui/react/lib/Nav';
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { useAuth } from '../../hook/useAuth';
 
-import { LoginPage } from '../Login'
 import { BrandPage } from '../Brand';
-// import { ProductPage } from '../Product';
-// import { CustomerPage } from '../Customer';
-
-
-import { useAuth } from '../../hooks/useAuth';
-// import { SignIn } from '../SignIn';
-// import { UserPage } from '../User';
-// import { CategoryPage } from '../Category';
-
+import { LoginPage } from '../Login';
 
 const navLinkGroups: INavLinkGroup[] = [
   {
@@ -122,11 +114,7 @@ export function HomePage() {
               onRenderGroupHeader={onRenderGroupHeader as IRenderFunction<IRenderGroupHeaderProps>} />
 
             <Routes>
-              {/* <Route path="categories" element={<CategoryPage />} /> */}
               <Route path="brands" element={<BrandPage />} />
-              {/* <Route path="products" element={<ProductPage />} /> */}
-              {/* <Route path="customers" element={<CustomerPage />} /> */}
-              {/* <Route path="users" element={<UserPage />} /> */}
             </Routes>
           </Stack>
         </Stack>
